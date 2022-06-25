@@ -1,4 +1,4 @@
-# [2021 - 2022] Programação avançada 
+# [2021 - 2022] Programação Avançada 
 
 - [ ] Ficha de Exercicios das aulas resolvida 
 - [ ]  Study Sessions - Material recolhido, exemplos 
