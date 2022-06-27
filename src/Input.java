@@ -1,6 +1,7 @@
-
-
 import java.util.Scanner;
+
+// [ ISEC 2021 - 2022] Programação Avançada 
+// Ficheiro fornecido pelo Docente
 
 public final class Input {
     private Input() {}       // impedir criacao de objectos
@@ -25,8 +26,9 @@ public final class Input {
             value = sc.nextLine().trim();            
         } while (value.isBlank());
         if (onlyOneWord) {
-            Scanner auxsc = new Scanner(value);
-            value = auxsc.next();  // this can/should be imnproved
+            try (Scanner auxsc = new Scanner(value)) {
+                value = auxsc.next();  // this can/should be imnproved
+            }
         }
         return value;
     }
