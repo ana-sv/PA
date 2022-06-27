@@ -5,7 +5,6 @@ import examplesFX.gamebw.model.fsm.BetResult;
 import examplesFX.gamebw.model.fsm.GameBWState;
 import examplesFX.gamebw.ui.gui.util.ToastMessage;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
@@ -65,13 +64,10 @@ public class WaitBetUI extends AnchorPane {
         });
     }
 
-    EventHandler<ActionEvent> t = new EventHandler() {
-        @Override
-        public void handle(Event event) {
-            if ( ((Button) event.getSource()).getUserData() instanceof Integer bet) {
-                BetResult result = gameBWManager.bet(bet);
-                ToastMessage.show(getScene().getWindow(),"Bet result: "+result);
-            }
+    EventHandler<ActionEvent> t = event -> {
+        if ( ((Button) event.getSource()).getUserData() instanceof Integer bet) {
+            BetResult result = gameBWManager.bet(bet);
+            ToastMessage.show(getScene().getWindow(),"Bet result: "+result);
         }
     };
 
