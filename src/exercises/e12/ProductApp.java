@@ -1,6 +1,6 @@
 package exercises.e12;
 
-public class ProdutoApp {
+public class ProductApp {
 
     public static void main(String[] args) {
 
