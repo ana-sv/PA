@@ -6,12 +6,6 @@
 
  - [ Operators in Java  -  GeekForGeeks ](https://www.geeksforgeeks.org/operators-in-java/)
 
- - [ Difference Between StringBuffer and StringBuilder in Java -  GeekForGeeks ](https://www.geeksforgeeks.org/difference-between-stringbuffer-and-stringbuilder-in-java/?ref=rp)
-
- - [ String vs. StringBuilder vs. StringBuffer in Java  | Geekific  ](https://www.youtube.com/watch?v=_drNcLWgUlE&ab_channel=Geekific)
-
-  - [ StringTokenizer Class in Java  -  GeekForGeeks ]( https://www.geeksforgeeks.org/stringtokenizer-class-in-java/ )
-
  - [ Inheritance in Java  -  GeekForGeeks ](https://www.geeksforgeeks.org/inheritance-in-java/)
 
   - [ Access Modifiers in Java -  GeekForGeeks  ]( https://www.geeksforgeeks.org/access-modifiers-java/ )
