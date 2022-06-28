@@ -6,8 +6,6 @@
 
  - [ Operators in Java  -  GeekForGeeks ](https://www.geeksforgeeks.org/operators-in-java/)
 
- - [ Difference between print() and println() in Java  -  GeekForGeeks ]( https://www.geeksforgeeks.org/difference-between-print-and-println-in-java/)
-
  - [ Difference Between StringBuffer and StringBuilder in Java -  GeekForGeeks ](https://www.geeksforgeeks.org/difference-between-stringbuffer-and-stringbuilder-in-java/?ref=rp)
 
  - [ String vs. StringBuilder vs. StringBuffer in Java  | Geekific  ](https://www.youtube.com/watch?v=_drNcLWgUlE&ab_channel=Geekific)
@@ -35,7 +33,6 @@
 
 - [ JavaFX Java GUI Tutorial - 30 - Binding Properties Example ]( https://www.youtube.com/watch?v=6Zi2L0kHSx4&ab_channel=thenewboston )
 
-- [  ]( )
 
 - [  ]( )
 
@@ -46,3 +43,9 @@
 - [  ]( )
 
 - [  ]( )
+
+
+## Java Quiz 
+
+- [ w3schools basic quiz ]( https://www.w3schools.com/quiztest/quiztest.asp?qtest=JAVA )
+
