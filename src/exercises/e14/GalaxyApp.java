@@ -3,12 +3,13 @@ package exercises.e14;
 public class GalaxyApp {
 
     public static void main(String[] args) { 
-        Galaxy d = new Galaxy(); 
+        Galaxy d = new  Galaxy(); 
         d.newSystem("Sistema Solar"); //nome do sistema 
         d.addStar("Sistema Solar", "Sol"); // acrescenta estrela a sistema 
         d.addPlanet("Sistema Solar", "Mercurio"); //acrescenta primeiro planeta 
         d.addPlanet("Sistema Solar", "Venus"); //acrescenta segundo planeta 
         d.addPlanet("Sistema Solar", "Terra"); //acrescenta terceiro planeta 
+        
         d.newSystem("Alfa Centauri"); 
         d.addStar("Alfa Centauri", "Proxima Centauri"); 
         d.addStar("Alfa Centauri", "Alfa Centauri A"); 

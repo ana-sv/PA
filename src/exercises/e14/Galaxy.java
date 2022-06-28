@@ -4,69 +4,50 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Galaxy {
-    protected String name;
-    protected Map <String,       Map<ArrayList<String>,ArrayList<String>> >  theSystem; 
-                 //nomeSistema   //arrayPanetas       //arrayEstrelas
 
-    public Galaxy(){
-        theSystem = new HashMap<>();
-        name = null; 
+public class Galaxy implements IGalaxy{ 
+
+    protected String GalaxyName;       
+    protected HashMap< String, HashMap< ArrayList<String>,ArrayList<String> > > systems ; 
+                    //SystemName       //arrayPlanets       //arrayStars   
+   
+    public Galaxy() {
     }
 
-    public boolean newSystem( String nome ){
-        Map <ArrayList<String> ,ArrayList<String> > corposCelestes = new HashMap<>();  // ?????
-       theSystem.put(nome,corposCelestes);
-
-        return true;
+    @Override
+    public void newSystem(String SystemName) {
+        // TODO Auto-generated method stub
+        
     }
-
-    public boolean addPlanet(String nameSystem, String planet){ // ?????
-        if(theSystem.containsKey(nameSystem)){
-
-             return true; 
-        }
-           
+    @Override
+    public void addStar(String SystemName, String star) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public void addPlanet(String SystemName, String planet) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public String getPlanet(String SystemName, int index) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public String getStars(String SystemName) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public boolean existsSystem(String SystemName) {
+        // TODO Auto-generated method stub
         return false;
     }
     
-    public boolean addStar(String nameSystem, String star){
-        if(theSystem.containsKey(nameSystem)){
-
-            ArrayList<String> arrayStars = new ArrayList<String>(); 
-            arrayStars.add(star);
-
-            theSystem.get(nameSystem).put(null, arrayStars);
-          
-            return true;
-        }
-            
-        return false;
-    }
+    
 
 
-    public String getPlanet(String nameSystem, int index){
-
-        // < nameSystem , <  [2] , null
-
-        ///////////? 
-
-        return " ";
-    }
-
-    public String getStars(String nameStar){
-
-
-                 ///////////? 
-
-        return " ";
-    }
-
-    public boolean existsSystem(String nameSystem ){
-        if( theSystem.containsKey(nameSystem))
-            return true;
-        return false; 
-    }
 
 
 
