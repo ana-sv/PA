@@ -20,8 +20,9 @@
 
   - [ equals() and hashCode() methods in Java  -  GeekForGeeks ](https://www.geeksforgeeks.org/equals-hashcode-methods-java/)
 
- - [  ]( )
+ - [ HashMap in Java with Examples ]( https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/)
 
+- [ HashMap Class Methods in Java with Examples ]( https://www.geeksforgeeks.org/hashmap-class-methods-java-examples-set-1-put-get-isempty-size/?ref=rp )
 
 
 
