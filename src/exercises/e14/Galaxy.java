@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class Galaxy {
     protected String name;
-    protected Map <String, Map<ArrayList<String>,ArrayList<String>> > theSystem; 
-                //nomeSistema  //arrayPanetas //arrayEstrelas
+    protected Map <String,       Map<ArrayList<String>,ArrayList<String>> >  theSystem; 
+                 //nomeSistema   //arrayPanetas       //arrayEstrelas
 
     public Galaxy(){
         theSystem = new HashMap<>();
@@ -15,35 +15,53 @@ public class Galaxy {
     }
 
     public boolean newSystem( String nome ){
-       theSystem.put(nome,null);
+        Map <ArrayList<String> ,ArrayList<String> > corposCelestes = new HashMap<>();
+       theSystem.put(nome,corposCelestes);
+
         return true;
     }
 
     public boolean addPlanet(String nameSystem, String planet){
-        if(theSystem.containsKey(nameSystem))
-            return true; 
+        if(theSystem.containsKey(nameSystem)){
+
+            ArrayList<String> arrayPlanets= new ArrayList<String>(); 
+            arrayPlanets.add(planet); 
+
+            theSystem.get(nameSystem).put(arrayPlanets, null);
+
+             return true; 
+        }
+           
         return false;
     }
     
     public boolean addStar(String nameSystem, String star){
-        if(theSystem.containsKey(nameSystem))
+        if(theSystem.containsKey(nameSystem)){
+
+            ArrayList<String> arrayStars = new ArrayList<String>(); 
+            arrayStars.add(star);
+
+            theSystem.get(nameSystem).put(null, arrayStars);
+          
             return true;
+        }
+            
         return false;
     }
 
 
     public String getPlanet(String nameSystem, int index){
-        if ( theSystem.containsKey(nameSystem) ) {
-          //// falta
 
-        }
+        ///////////? 
+
         return " ";
     }
 
     public String getStars(String nameStar){
-        if ( theSystem.containsKey(nameStar) ) {
-     // falta 
-        }
+
+
+                 ///////////? 
+
         return " ";
     }
 
