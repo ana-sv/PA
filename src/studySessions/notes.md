@@ -2,7 +2,27 @@
 
 #
 
-###### Exemplo Percentagens 
+#### String , StringBuffer & StringBuilder 
+
+``` java
+String 
+> strings are immutable
+> a new string is created in the memory every time we change the value of the string
+
+StringBuilder 
+> not synchronized 
+> better in single-threaded enviromments
+> mutable
+> any change induced will modify the existing sequence of characteres created in the memory 
+
+StringBuffer
+> synchronized 
+
+``` 
+
+#
+
+#### Exemplo Percentagens 
 
 ``` java
     public boolean testUnit() {
@@ -19,7 +39,7 @@
 
 #
 
-###### Exemplo equals
+#### Exemplo equals
 
 ``` java
     @Override
