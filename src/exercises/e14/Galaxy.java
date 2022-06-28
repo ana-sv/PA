@@ -15,19 +15,14 @@ public class Galaxy {
     }
 
     public boolean newSystem( String nome ){
-        Map <ArrayList<String> ,ArrayList<String> > corposCelestes = new HashMap<>();
+        Map <ArrayList<String> ,ArrayList<String> > corposCelestes = new HashMap<>();  // ?????
        theSystem.put(nome,corposCelestes);
 
         return true;
     }
 
-    public boolean addPlanet(String nameSystem, String planet){
+    public boolean addPlanet(String nameSystem, String planet){ // ?????
         if(theSystem.containsKey(nameSystem)){
-
-            ArrayList<String> arrayPlanets= new ArrayList<String>(); 
-            arrayPlanets.add(planet); 
-
-            theSystem.get(nameSystem).put(arrayPlanets, null);
 
              return true; 
         }
@@ -51,6 +46,8 @@ public class Galaxy {
 
 
     public String getPlanet(String nameSystem, int index){
+
+        // < nameSystem , <  [2] , null
 
         ///////////? 
 
