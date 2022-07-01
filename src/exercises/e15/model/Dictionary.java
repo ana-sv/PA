@@ -6,7 +6,8 @@ import java.util.*;
 public class Dictionary implements IDictionary {
 
     private String currentLanguage;
-    private Map<String, Map<String,String>> dict;
+    private Map<String, Map<String,String> > dict;
+         //Language        //word   //wordTranslated
 
     public Dictionary(){
         this.dict = new HashMap<>();

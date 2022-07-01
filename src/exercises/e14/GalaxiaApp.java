@@ -1,9 +1,9 @@
 package exercises.e14;
 
-public class GalaxyApp {
+public class GalaxiaApp {
 
     public static void main(String[] args) { 
-        Galaxy d = new  Galaxy(); 
+        Galaxia d = new  Galaxia(); 
         d.newSystem("Sistema Solar"); //nome do sistema 
         d.addStar("Sistema Solar", "Sol"); // acrescenta estrela a sistema 
         d.addPlanet("Sistema Solar", "Mercurio"); //acrescenta primeiro planeta 
