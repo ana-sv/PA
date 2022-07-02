@@ -3,12 +3,12 @@ package exercises.e18;
  class TemperaturaDiaria { 
  
     private int temperaturasHorarias[]; 
-    private String responsavelMedicoes; 
-    private String localMedicao; 
+    // private String responsavelMedicoes; 
+  //  private String localMedicao; 
  
     TemperaturaDiaria(int[] temps, String resp, String local) { 
-        responsavelMedicoes = resp; 
-        localMedicao = local; 
+      //  responsavelMedicoes = resp; 
+        //localMedicao = local; 
         temperaturasHorarias = new int[temps.length]; 
         for (int i = 0; i < temperaturasHorarias.length; i++) { 
             temperaturasHorarias[i] = temps[i]; 
