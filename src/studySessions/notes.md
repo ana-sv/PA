@@ -2,6 +2,43 @@
 
 #
 
+
+
+
+
+
+
+#### Comparable & Comparator 
+*exercício 19*
+
+``` java
+public class Book implements Comparable<Book>{
+// ...
+        @Override
+        public int compareTo(Book o) {
+            return id - o.id;
+                        //Another example: return title.compareTo(o.title);
+        }
+}
+// ...
+``` 
+
+
+``` java
+
+public class BookComparator implements Comparator<Book> {
+// ...
+        @Override
+        public int compare(Book o1, Book o2) {
+            return o1.getTitle().compareTo(o2.getTitle());
+        }
+// ...
+}
+``` 
+
+
+#
+
 #### String , StringBuffer & StringBuilder 
 
 ``` java
