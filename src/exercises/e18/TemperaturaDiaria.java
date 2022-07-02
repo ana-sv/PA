@@ -23,11 +23,15 @@ package exercises.e18;
                 && getMinimo() == outro.getMinimo(); 
     } 
     public int hashCode() { 
-        int s = 0; 
+       /* int s = 0; 
         for (int t : temperaturasHorarias) { 
             s += t; 
         } 
-        return s; 
+        return s; */       // ERRO NO HASCODE!  
+        
+        return getMaximo() + getMinimo(); 
+
+
     } 
  
     int getMaximo() { 
