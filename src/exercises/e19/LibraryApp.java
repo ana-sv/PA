@@ -4,6 +4,7 @@ import exercises.e19.model.Library;
 import exercises.e19.model.OldBook;
 import exercises.e19.model.RecentBook;
 
+
 public class LibraryApp {
 
     public static void main(String[] args) {
@@ -15,6 +16,8 @@ public class LibraryApp {
         lib.addBook(old);
         lib.addBook(recent);
 
+        System.out.println(lib.getBook(0).compareTo(lib.getBook(1))); // -1, code 0 < code 1 
+        System.out.println(lib.getBook(0).compareTo(lib.getBook(0))); // 0, code 0 == code 0
         System.out.println(lib.toString());
 
     
