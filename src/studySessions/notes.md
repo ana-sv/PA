@@ -8,7 +8,6 @@
 
 
   #### Herança vs Composição 
-  *exercício 20*
 
   > **Composição**: um objecto composto por outros, tem outros objectos como atributos;
   > **Herança** : um objecto é definido como uma especialização de um outro + genérico; todas as caracteristicas que definem um tipo de objecto base são herdadas pelo novo objetcto; uma nova classe *extends* classe base
