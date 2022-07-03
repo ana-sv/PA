@@ -7,6 +7,24 @@
 
 
 
+  #### Herança vs Composição 
+  *exercício 20*
+
+  > **Composição**: um objecto composto por outros, tem outros objectos como atributos;
+  > **Herança** : um objecto é definido como uma especialização de um outro + genérico; todas as caracteristicas que definem um tipo de objecto base são herdadas pelo novo objetcto; uma nova classe *extends* classe base
+
+  > - Em java não existe herança multipla
+  > - Referem-se caracteristicas da classe base usando *super*
+  > - A classe derivada tem acesso aos metodos e variavies protected and public da classe base;
+
+  > - Se classe base tem um construtor por omissão este é automaticamente chamado aquando a criação de um objecto da classe derivada;
+  > - Se classe base ano tem construtor por omissão então a classe derivada tem que definir um construtor que permita chamar um construtor da classe base;
+
+  > - Os comportamentos/métodos definidos nas classes base podem ser redefinidos nas classes derivadas; devem ser marcadas com a notação @Override 
+
+  
+
+#
 
 #### Comparable & Comparator 
 *exercício 19*
@@ -111,19 +129,3 @@ StringBuffer
 
   #
 
-
-  #### Herança vs Composição 
-
-  > **Composição**: um objecto composto por outros, tem outros objectos como atributos;
-  > **Herança** : um objecto é definido como uma especialização de um outro + genérico; todas as caracteristicas que definem um tipo de objecto base são herdadas pelo novo objetcto; uma nova classe *extends* classe base
-
-  > - Em java não existe herança multipla
-  > - Referem-se caracteristicas da classe base usando *super*
-  > - A classe derivada tem acesso aos metodos e variavies protected and public da classe base;
-
-  > - Se classe base tem um construtor por omissão este é automaticamente chamado aquando a criação de um objecto da classe derivada;
-  > - Se classe base ano tem construtor por omissão então a classe derivada tem que definir um construtor que permita chamar um construtor da classe base;
-
-  > - Os comportamentos/métodos definidos nas classes base podem ser redefinidos nas classes derivadas; devem ser marcadas com a notação @Override 
-
-  
