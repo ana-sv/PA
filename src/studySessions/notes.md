@@ -25,8 +25,16 @@
 
 #
 
-#### Comparable & Comparator 
-*exercício 19*
+#### Sorting  HashMaps , Comparable & Comparator 
+
+- [ Sorting a Hashmap according to values ](https://www.geeksforgeeks.org/sorting-a-hashmap-according-to-values/ )
+
+- [ Sorting a HashMap according to keys  ](https://www.geeksforgeeks.org/sorting-hashmap-according-key-value-java/)
+
+- [ Comparable vs Comparator in Java ](https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/)
+
+**> exercicio 19 e 20**
+
 
 ``` java
 public class Book implements Comparable<Book>{
