@@ -115,6 +115,17 @@ StringBuffer
     }
 
 ``` 
+#
+
+#### Exemplo Random 
+``` java
+import java.util.concurrent.ThreadLocalRandom;
+
+// nextInt is normally exclusive of the top value,
+// so add 1 to make it inclusive
+int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
+``` 
+
 
 #
 
@@ -163,10 +174,6 @@ StringBuffer
   > - Se classe base ano tem construtor por omissão então a classe derivada tem que definir um construtor que permita chamar um construtor da classe base;
 
   > - Os comportamentos/métodos definidos nas classes base podem ser redefinidos nas classes derivadas; devem ser marcadas com a notação @Override 
-
-  
-
-
 
   #
 

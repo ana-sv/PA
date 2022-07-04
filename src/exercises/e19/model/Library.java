@@ -7,10 +7,6 @@ public class Library  {
     protected String name;
     protected List<Book> books;
 
-    enum Type {
-        OLD, RECENT;
-    }
-
     public Library(String name) {
         this.name = name;
         books = new ArrayList<>();
