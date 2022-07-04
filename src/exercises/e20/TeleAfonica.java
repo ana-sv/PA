@@ -3,11 +3,17 @@ package exercises.e20;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
-import javax.crypto.spec.ChaCha20ParameterSpec;
 
 public class TeleAfonica {
     protected HashMap<Integer, Cartao> cartoes;
@@ -62,14 +68,31 @@ public class TeleAfonica {
         return s;
     }
 
-    // https://www.geeksforgeeks.org/sorting-a-hashmap-according-to-values/
+
+
+    // https://www.geeksforgeeks.org/sorting-a-hashmap-according-to-values/~
+    // Using Streams in Java 8
     public String listaCartoesOrdenadosSaldo() {
-         
-    
+        String s = "";
+
+        HashMap<Integer, Cartao> temp = cartoes.entrySet().stream()
+        .sorted((i1, i2)-> i1.getValue().compareTo(i2.getValue()))
+            .collect(Collectors.toMap(
+            Map.Entry::getKey,
+            Map.Entry::getValue,
+            (e1, e2) -> e1, LinkedHashMap::new));
 
 
-
-        return "";
+            for( Map.Entry<Integer,Cartao> n: temp.entrySet()){
+                s +=  n.getKey() + " [" + n.getValue().getSaldo() + "] \n";
+            }
+       
+        return s;
     }
+
+
+
+
+
 
 }
