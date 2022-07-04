@@ -1,5 +1,10 @@
 package exercises.e20;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -14,8 +19,8 @@ import java.util.TreeMap;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-
 public class TeleAfonica {
+    private int nFatura = 0;
     protected HashMap<Integer, Cartao> cartoes;
 
     public TeleAfonica() {
@@ -26,9 +31,23 @@ public class TeleAfonica {
         return this.cartoes;
     }
 
-    public boolean exportarInfoTXT() {
-        // TODO
-        return false;
+    public void exportarInfoTXT() {
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(new BufferedWriter( new FileWriter("CartoesAtivos")));
+
+            pw.println("TeleAfonica: Cartoes Ativos:");
+            for( Map.Entry<Integer, Cartao> a  : cartoes.entrySet() )
+                     pw.println("[" + a.getKey() + "]" + a.getValue().toString() );          
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (pw != null)
+                pw.close();
+        }
+
     }
 
     public void addCartao(int numero, double quantia) {
@@ -46,9 +65,25 @@ public class TeleAfonica {
         return cartoes.get(numero).getSaldo();
     }
 
-    public boolean imprimeFaturaTXT(int numero) {
-        // TODO
-        return false;
+    public void imprimeFaturaTXT(int numero) {
+        if (!cartoes.containsKey(numero))
+            return;
+
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(new BufferedWriter( new FileWriter("Fatura"+ nFatura++ + "_" + numero)));
+
+            pw.println("Fatura "+ nFatura++ + "- cliente com numero:" + numero);
+            for( Map.Entry<Integer, HashMap<Double, Double>> a  : cartoes.get(numero).getChamadas().entrySet() )
+                     pw.println(a);          
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (pw != null)
+                pw.close();
+        }
+
     }
 
     public String listaCartoes() {
@@ -68,31 +103,23 @@ public class TeleAfonica {
         return s;
     }
 
-
-
     // https://www.geeksforgeeks.org/sorting-a-hashmap-according-to-values/~
     // Using Streams in Java 8
     public String listaCartoesOrdenadosSaldo() {
         String s = "";
 
         HashMap<Integer, Cartao> temp = cartoes.entrySet().stream()
-        .sorted((i1, i2)-> i1.getValue().compareTo(i2.getValue()))
-            .collect(Collectors.toMap(
-            Map.Entry::getKey,
-            Map.Entry::getValue,
-            (e1, e2) -> e1, LinkedHashMap::new));
+                .sorted((i1, i2) -> i1.getValue().compareTo(i2.getValue()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1, e2) -> e1, LinkedHashMap::new));
 
+        for (Map.Entry<Integer, Cartao> n : temp.entrySet()) {
+            s += n.getKey() + " [" + n.getValue().getSaldo() + "] \n";
+        }
 
-            for( Map.Entry<Integer,Cartao> n: temp.entrySet()){
-                s +=  n.getKey() + " [" + n.getValue().getSaldo() + "] \n";
-            }
-       
         return s;
     }
-
-
-
-
-
 
 }
