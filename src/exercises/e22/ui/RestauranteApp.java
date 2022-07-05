@@ -5,7 +5,6 @@ import java.util.Arrays;
 import exercises.e22.model.PublicidadeGastronomica;
 import exercises.e22.model.Restaurantes.GaleriaDeSabores;
 import exercises.e22.model.Restaurantes.Italix;
-import exercises.e22.model.Restaurantes.Restaurante;
 import exercises.e22.model.Restaurantes.UnburgerKong;
 import exercises.e22.utils.Input;
 
@@ -15,9 +14,9 @@ public class RestauranteApp {
 
         PublicidadeGastronomica publicidade = new PublicidadeGastronomica();
 
-        Restaurante galeria = new GaleriaDeSabores(publicidade);
-        Restaurante burger = new UnburgerKong(publicidade);
-        Restaurante italix = new Italix(publicidade);
+        new GaleriaDeSabores(publicidade);   //não tem nenhuma " variavel atribuida" porque não vai ser preciso 
+        new UnburgerKong(publicidade);
+        new Italix(publicidade);
 
         String[] opcoes = { "[1]Vegetariano", "[2]Dieta", "[3]Italiano", "[4]Fast food", "[5]Geral", "[6]Sair" };
         int opcao = 0;
