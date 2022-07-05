@@ -198,6 +198,9 @@ int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 
 - [ HashMap Class Methods in Java with Examples ]( https://www.geeksforgeeks.org/hashmap-class-methods-java-examples-set-1-put-get-isempty-size/?ref=rp )
 
+- [ HashSet in Java ]( https://www.geeksforgeeks.org/hashset-in-java/ )
+
+- [ How to sort HashSet in Java ](https://www.geeksforgeeks.org/how-to-sort-hashset-in-java/ )
 
 
 
@@ -209,10 +212,6 @@ int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 
 - [ JavaFX Java GUI Tutorial - 30 - Binding Properties Example ]( https://www.youtube.com/watch?v=6Zi2L0kHSx4&ab_channel=thenewboston )
 
-
-- [  ]( )
-
-- [  ]( )
 
 - [  ]( )
 
