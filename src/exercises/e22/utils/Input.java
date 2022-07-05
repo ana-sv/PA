@@ -1,3 +1,4 @@
+package exercises.e22.utils;
 
 import java.util.Scanner;
 
