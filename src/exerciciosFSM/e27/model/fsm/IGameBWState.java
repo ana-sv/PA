@@ -1,9 +1,11 @@
 package exerciciosFSM.e27.model.fsm;
 
-import exerciciosFSM.e27.model.fsm.GameBWState;
-
 public interface IGameBWState {
-    // TODO: transitions
+    void start();
+    void end();
+    BetResult bet(int nr_balls);
+    boolean loseWhiteball();
+    boolean removeTwoBalls();
 
     GameBWState getState();
 }

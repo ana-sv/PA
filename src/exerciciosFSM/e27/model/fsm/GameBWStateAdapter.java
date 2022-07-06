@@ -2,9 +2,9 @@ package exerciciosFSM.e27.model.fsm;
 
 import exerciciosFSM.e27.model.data.GameBWData;
 
-abstract class GameBWStateAdapter implements IGameBWState {
-    GameBWContext context;
-    GameBWData data;
+public abstract class GameBWStateAdapter implements IGameBWState {
+   protected  GameBWContext context;
+  protected  GameBWData data;
 
     protected GameBWStateAdapter(GameBWContext context, GameBWData data) {
         this.context = context;
@@ -15,4 +15,29 @@ abstract class GameBWStateAdapter implements IGameBWState {
         context.changeState(newState.createState(context,data));
     }
 
+
+    @Override
+    public void start() {
+
+    }
+
+    @Override
+    public void end() {
+
+    }
+
+    @Override
+    public BetResult bet(int nr_balls) {
+        return BetResult.ERROR;
+    }
+
+    @Override
+    public boolean loseWhiteball() {
+        return false;
+    }
+
+    @Override
+    public boolean removeTwoBalls() {
+        return false;
+    }
 }

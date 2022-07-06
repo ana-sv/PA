@@ -1,4 +1,4 @@
-package exerciciosFSM.e27.model.ui.utils;
+package exerciciosFSM.e27.model.ui.text.utils;
 
 import java.util.Scanner;
 
