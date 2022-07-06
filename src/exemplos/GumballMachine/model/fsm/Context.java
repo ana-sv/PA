@@ -1,7 +1,7 @@
-package exemplos.GumballMachine.model;
+package exemplos.GumballMachine.model.fsm;
 
 import exemplos.GumballMachine.model.data.GumballMachineData;
-import exemplos.GumballMachine.model.states.WithoutCoinState;
+import exemplos.GumballMachine.model.fsm.states.WithoutCoinState;
 
 public class Context {
     private GumballMachineData data;

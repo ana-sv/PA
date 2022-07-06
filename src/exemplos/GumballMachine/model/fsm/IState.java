@@ -1,4 +1,4 @@
-package exemplos.GumballMachine.model;
+package exemplos.GumballMachine.model.fsm;
 
 public interface IState {
     boolean insertCoin();

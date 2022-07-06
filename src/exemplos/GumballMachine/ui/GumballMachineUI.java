@@ -1,6 +1,6 @@
 package exemplos.GumballMachine.ui;
 
-import exemplos.GumballMachine.model.Context;
+import exemplos.GumballMachine.model.fsm.Context;
 
 public class GumballMachineUI {
     private Context fsm;

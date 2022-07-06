@@ -1,9 +1,9 @@
-package exemplos.GumballMachine.model.states;
+package exemplos.GumballMachine.model.fsm.states;
 
-import exemplos.GumballMachine.model.Context;
-import exemplos.GumballMachine.model.State;
-import exemplos.GumballMachine.model.StateAdapter;
 import exemplos.GumballMachine.model.data.GumballMachineData;
+import exemplos.GumballMachine.model.fsm.Context;
+import exemplos.GumballMachine.model.fsm.State;
+import exemplos.GumballMachine.model.fsm.StateAdapter;
 
 public class WithCoinState extends StateAdapter {
     WithCoinState(Context context, GumballMachineData data) {

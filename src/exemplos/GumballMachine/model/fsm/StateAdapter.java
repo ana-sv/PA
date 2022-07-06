@@ -1,4 +1,4 @@
-package exemplos.GumballMachine.model;
+package exemplos.GumballMachine.model.fsm;
 import exemplos.GumballMachine.model.data.GumballMachineData;
 
 public abstract class StateAdapter implements IState {
