@@ -1,8 +1,9 @@
 package exercicios.Library_Files.model.books;
 
+import java.util.Arrays;
 import java.util.List;
 
-public class Book implements Comparable<Book>,Cloneable {
+public class Book implements Comparable<Book>, Cloneable {
     private static int countID = 0;
 
     private static int getNewID() {
@@ -27,6 +28,12 @@ public class Book implements Comparable<Book>,Cloneable {
         id = getNewID();
         this.title = title;
         this.authors = List.copyOf(authors);
+    }
+
+    protected Book(String title, String[] authors) {
+        id = getNewID();
+        this.title = title;
+        this.authors = Arrays.asList(authors);
     }
 
     @Override
@@ -62,19 +69,20 @@ public class Book implements Comparable<Book>,Cloneable {
 
     @Override
     public String toString() {
-        if (title==null)
-            return "DummyBook ["+id+']';
-        if (authors==null || authors.size()==0)
-            return id +",'" + title + "'";
+        if (title == null)
+            return "DummyBook [" + id + ']';
+        if (authors == null || authors.size() == 0)
+            return id + ",'" + title + "'";
         String strAuthors = authors.toString();
-        return id +",'" + title + "', " + strAuthors.substring(1,strAuthors.length()-1);
+        return id + ",'" + title + "', " + strAuthors.substring(1, strAuthors.length() - 1);
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        //if (o == null || getClass() != o.getClass()) return false;
-        if ( o instanceof Book book )
+        if (this == o)
+            return true;
+        // if (o == null || getClass() != o.getClass()) return false;
+        if (o instanceof Book book)
             return id == book.id;
         return false;
     }
@@ -87,7 +95,6 @@ public class Book implements Comparable<Book>,Cloneable {
     @Override
     public int compareTo(Book o) {
         return id - o.id;
-        //return title.compareTo(o.title);
+        // return title.compareTo(o.title);
     }
 }
-

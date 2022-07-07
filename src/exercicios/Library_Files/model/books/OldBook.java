@@ -4,10 +4,17 @@ import java.util.List;
 
 public class OldBook extends Book {
     private int nr_copies;
+    
     public OldBook(String title, List<String> authors,int nr_copies) {
         super(title, authors);
         this.nr_copies = nr_copies;
     }
+
+    public OldBook(String title, String[] authors,int nr_copies) {
+        super(title, authors);
+        this.nr_copies = nr_copies;
+    }
+
 
     public int getNr_copies() {
         return nr_copies;

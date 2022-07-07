@@ -12,6 +12,13 @@ public class RecentBook extends Book {
         this.cost = cost;
     }
 
+    public RecentBook(String title, String[] authors,String isbn, double cost) {
+        super(title, authors);
+        this.isbn = isbn;
+        this.cost = cost;
+    }
+
+
     public String getIsbn() {
         return isbn;
     }

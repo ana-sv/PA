@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+
+import exercicios.Library_Files.model.books.OldBook;
+import exercicios.Library_Files.model.books.RecentBook;
 import exercicios.Library_Files.model.library.Library;
 
 public class LibraryFiles extends LibraryFilesAdapter {
@@ -22,28 +25,37 @@ public class LibraryFiles extends LibraryFilesAdapter {
     public boolean loadtxt(String fileName) {
         String line;
         Scanner sc;
-        
+
         try {
             FileReader fr = new FileReader(fileName);
             BufferedReader br = new BufferedReader(fr);
 
 
-            // TODO terminar 
-
-
-
-
             while ((line = br.readLine()) != null) {
                 sc = new Scanner(line);
-                sc.useDelimiter(",");
+                sc.useDelimiter("\n");
 
                
                 if (sc.hasNext()) {
-                    if(sc.next() == "*OldBook" ){
+                    if(sc.next() == "Old" ){
+                        String title = sc.next();
+                        String str = sc.nextLine();
+                        String[] author = str.split(":");
+                        int copies = sc.nextInt();
+                        OldBook b = new OldBook(title,author,copies);
+                        lib.addBook(b);
 
 
-                    }else if(sc.next() == "*RecentBook" ){
+                    }else if(sc.next() == "Recent" ){
+                        String title = sc.next();
+                        String str = sc.nextLine();
+                        String[] author = str.split(":");
+                        String  isbn = sc.next();
+                        double cost = sc.nextDouble();
+                        RecentBook b = new RecentBook(title, author, isbn, cost);
+                        lib.addBook(b);
                         
+
 
                     }
 

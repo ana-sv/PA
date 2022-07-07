@@ -67,25 +67,23 @@ public class Library {
 
     public String toString() {
         StringBuilder sb = new StringBuilder("Library: "+name);
-        sb.append("\nBooks:\n");
         if (books ==null || books.size()==0)
             sb.append("The library is empty");
         else
             for(Book book : books)
-                sb.append(String.format("- %s\n",book.toString()));
+                sb.append(String.format("\n%s",book.toString()));
         return sb.toString();
     }
 
     public String toStringOtherOrder() {
         StringBuilder sb = new StringBuilder("Library: "+name);
-        sb.append("\nBooks:\n");
         if (books ==null || books.size()==0)
             sb.append("The library is empty");
         else {
             List<Book> orderSet = new ArrayList<>(books);
             Collections.sort(orderSet,new BookComparator());
             for (Book book : orderSet)
-                sb.append(String.format("- %s\n", book.toString()));
+                sb.append(String.format("\n%s", book.toString()));
         }
 
         return sb.toString();
