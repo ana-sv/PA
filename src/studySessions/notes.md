@@ -202,7 +202,7 @@ int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 
 - [ How to sort HashSet in Java ](https://www.geeksforgeeks.org/how-to-sort-hashset-in-java/ )
 
-
+- [ Singleton ](https://www.geeksforgeeks.org/singleton-class-java/)
 
 ## Java FX Help Links
 
@@ -212,8 +212,6 @@ int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 
 - [ JavaFX Java GUI Tutorial - 30 - Binding Properties Example ]( https://www.youtube.com/watch?v=6Zi2L0kHSx4&ab_channel=thenewboston )
 
-
-- [  ]( )
 
 - [  ]( )
 

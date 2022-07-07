@@ -1,7 +1,7 @@
 package exerciciosFSM.e27;
 
 import exerciciosFSM.e27.model.fsm.GameBWContext;
-import exerciciosFSM.e27.model.ui.text.GameBWUI;
+import exerciciosFSM.e27.ui.text.GameBWUI;
 
 public class Main {
     public static void main(String[] args) {
