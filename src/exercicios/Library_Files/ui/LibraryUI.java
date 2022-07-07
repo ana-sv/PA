@@ -2,28 +2,29 @@ package exercicios.Library_Files.ui;
 
 import java.util.ArrayList;
 
+import exercicios.Library_Files.model.LibraryManager;
 import exercicios.Library_Files.model.books.Book;
 import exercicios.Library_Files.model.books.OldBook;
 import exercicios.Library_Files.model.books.RecentBook;
-import exercicios.Library_Files.model.library.Library;
 import exercicios.Library_Files.ui.utils.PAInput;
 
 public class LibraryUI {
-    Library lib;
-    public LibraryUI(Library lib) {
+    LibraryManager lib;
+
+    public LibraryUI(LibraryManager lib) {
         this.lib = lib;
     }
 
     void addBook() {
-        int type = PAInput.chooseOption("Book type","Old Book","Recent book","Cancel operation");
+        int type = PAInput.chooseOption("Book type", "Old Book", "Recent book", "Cancel operation");
         if (type == 3 || type < 1)
             return;
-        String title = PAInput.readString("Book title: ",false);
+        String title = PAInput.readString("Book title: ", false);
         String author;
         ArrayList<String> authors = new ArrayList<>();
         do {
-            author = PAInput.readString("Name of one author [\'exit\' to finish]: ",false);
-            if (author!=null && !author.equalsIgnoreCase("exit"))
+            author = PAInput.readString("Name of one author [\'exit\' to finish]: ", false);
+            if (author != null && !author.equalsIgnoreCase("exit"))
                 authors.add(author);
         } while (!author.equalsIgnoreCase("exit"));
         if (authors.isEmpty())
@@ -31,20 +32,20 @@ public class LibraryUI {
 
         int id = switch (type) {
             case 1 -> {
-               int nr_copies = PAInput.readInt("Number of copies: ");
-               yield lib.addBook(new OldBook(title,authors,nr_copies));
+                int nr_copies = PAInput.readInt("Number of copies: ");
+                yield lib.addBook(new OldBook(title, authors, nr_copies));
             }
             case 2 -> {
-                String isbn = PAInput.readString("ISBN: ",false);
+                String isbn = PAInput.readString("ISBN: ", false);
                 double cost = PAInput.readNumber("Cost: ");
-                yield lib.addBook(new RecentBook(title,authors,isbn,cost));
+                yield lib.addBook(new RecentBook(title, authors, isbn, cost));
             }
             default -> -1;
         };
-        if (id<0)
+        if (id < 0)
             System.out.println("Error adding this new book");
         else
-            System.out.printf("The ID of this new book is: %d\n",id);
+            System.out.printf("The ID of this new book is: %d\n", id);
     }
 
     void findBook() {
@@ -53,7 +54,7 @@ public class LibraryUI {
         if (book == null)
             System.out.println("Book not found");
         else
-            System.out.println("Book found: "+book);
+            System.out.println("Book found: " + book);
     }
 
     void removeBook() {
@@ -67,8 +68,8 @@ public class LibraryUI {
 
     public void start() {
         while (true) {
-            switch (PAInput.chooseOption("LibraryList Manager - "+lib.getName(),
-                    "Add new book","Search book","Remove book","Show books",
+            switch (PAInput.chooseOption("LibraryList Manager - " + lib.getName(),
+                    "Add new book", "Search book", "Remove book", "Show books","Save","Load",
                     "Quit")) {
                 case 1:
                     addBook();
@@ -86,6 +87,12 @@ public class LibraryUI {
                     System.out.println(lib.toStringOtherOrder());
                     break;
                 case 5:
+                    lib.save();
+                    break;
+                case 6:
+                    lib.load(PAInput.readString("Insira nome para ficheiro", true));
+                    break;
+                case 7:
                     return;
             }
         }
