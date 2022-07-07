@@ -25,8 +25,9 @@ public final class PAInput {
             value = sc.nextLine().trim();            
         } while (value.isBlank());
         if (onlyOneWord) {
-            Scanner auxsc = new Scanner(value);
-            value = auxsc.next();
+            try (Scanner auxsc = new Scanner(value)) {
+                value = auxsc.next();
+            }
         }
         return value;
     }
