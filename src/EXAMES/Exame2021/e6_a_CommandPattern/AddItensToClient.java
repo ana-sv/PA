@@ -1,4 +1,4 @@
-package EXAMES.e6_a_CommandPattern;
+package EXAMES.Exame2021.e6_a_CommandPattern;
 
 import java.util.ArrayList;
 

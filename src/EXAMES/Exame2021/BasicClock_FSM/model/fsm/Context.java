@@ -1,9 +1,9 @@
-package EXAMES.BasicClock_FSM.model.fsm;
+package EXAMES.Exame2021.BasicClock_FSM.model.fsm;
 
 
 import java.security.PublicKey;
 
-import EXAMES.BasicClock_FSM.model.data.ClockData;
+import EXAMES.Exame2021.BasicClock_FSM.model.data.ClockData;
 
 public class Context {
     private ClockData data; 

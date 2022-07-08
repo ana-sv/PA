@@ -1,4 +1,4 @@
-package EXAMES.BasicClock_FSM.model.data;
+package EXAMES.Exame2021.BasicClock_FSM.model.data;
 
 public class ClockData {
     private int h,m,s;

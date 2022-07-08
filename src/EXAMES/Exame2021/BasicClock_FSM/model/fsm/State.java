@@ -1,11 +1,11 @@
-package EXAMES.BasicClock_FSM.model.fsm;
+package EXAMES.Exame2021.BasicClock_FSM.model.fsm;
 
-import EXAMES.BasicClock_FSM.model.data.ClockData;
-import EXAMES.BasicClock_FSM.model.fsm.states.AcertoDasHoras;
-import EXAMES.BasicClock_FSM.model.fsm.states.AcertoDosMinutos;
-import EXAMES.BasicClock_FSM.model.fsm.states.AcertoDosSegundos;
-import EXAMES.BasicClock_FSM.model.fsm.states.Desligado;
-import EXAMES.BasicClock_FSM.model.fsm.states.Display;
+import EXAMES.Exame2021.BasicClock_FSM.model.data.ClockData;
+import EXAMES.Exame2021.BasicClock_FSM.model.fsm.states.AcertoDasHoras;
+import EXAMES.Exame2021.BasicClock_FSM.model.fsm.states.AcertoDosMinutos;
+import EXAMES.Exame2021.BasicClock_FSM.model.fsm.states.AcertoDosSegundos;
+import EXAMES.Exame2021.BasicClock_FSM.model.fsm.states.Desligado;
+import EXAMES.Exame2021.BasicClock_FSM.model.fsm.states.Display;
 
 public enum State {
     DESLIGADO, DISPLAY, ACERTODASHORAS, ACERTODOSMINUTOS, ACERTODOSSEGUNDOS;

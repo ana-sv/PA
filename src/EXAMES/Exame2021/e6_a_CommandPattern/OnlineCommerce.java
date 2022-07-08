@@ -1,4 +1,4 @@
-package EXAMES.e6_a_CommandPattern;
+package EXAMES.Exame2021.e6_a_CommandPattern;
 
 public interface OnlineCommerce {
      // obtem código(ID) do item dado po o nome

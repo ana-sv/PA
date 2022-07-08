@@ -1,9 +1,9 @@
-package EXAMES.e6_b;
+package EXAMES.Exame2021.e6_b;
 
 import java.util.ArrayList;
 
-import EXAMES.e6_a_CommandPattern.AddItensToClient;
-import EXAMES.e6_a_CommandPattern.OnlineCommerce;
+import EXAMES.Exame2021.e6_a_CommandPattern.AddItensToClient;
+import EXAMES.Exame2021.e6_a_CommandPattern.OnlineCommerce;
 
 public class Main {
 /*
