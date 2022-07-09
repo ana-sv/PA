@@ -1,5 +1,6 @@
 package exercicios.Library_Files.model.library;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -10,7 +11,7 @@ import java.util.Set;
 import exercicios.Library_Files.model.books.Book;
 import exercicios.Library_Files.model.books.BookComparator;
 
-public class Library {
+public class Library implements Serializable{
     Set<Book> books;
     String name;
 

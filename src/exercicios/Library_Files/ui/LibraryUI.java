@@ -87,10 +87,10 @@ public class LibraryUI {
                     System.out.println(lib.toStringOtherOrder());
                     break;
                 case 5:
-                    lib.save();
+                    lib.saveSerial();
                     break;
                 case 6:
-                    lib.load(PAInput.readString("Insira nome para ficheiro", true));
+                    lib.loadSerial();
                     break;
                 case 7:
                     return;

@@ -47,7 +47,7 @@ public class ClockPane extends BorderPane{
     }
 
     private void update(){
-        ESituation situation = obs.getSituation();
+     //   ESituation situation = obs.getSituation();
         // Definir o texto da label display
         // C 
 

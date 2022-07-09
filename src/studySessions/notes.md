@@ -1,6 +1,34 @@
 # Notes 
 
 
+
+
+
+### Deserialização Exemplo
+``` java
+    MyObject load(String filename) {
+        try (ObjectInputStream ois = new ObjectInputStream(
+                new FileInputStream(filename))) {
+            return (MyObject) ois.readObject();
+        } catch (Exception e) {
+            System.err.println("Error loading data");
+        }
+        return null;
+``` 
+
+### Serialização Exemplo
+``` java
+    void save(String filename, MyObject obj) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(
+                new FileOutputStream(filename))) {
+            oos.writeObject(obj);
+        } catch (Exception e) {
+            System.err.println("Error saving data");
+        }
+    }
+``` 
+
+
 #
 
 #### Sorting  HashMaps , Comparable & Comparator 
