@@ -1,6 +1,6 @@
-package EXAMES.Exame2021_Parte1.e6_a_CommandPattern;
+package EXAMES.Exame2021.e6.model;
 
-public interface OnlineCommerce {
+public interface IOnlineCommerce {                       // Interface parao ShoppingListManager ? Facade?
      // obtem código(ID) do item dado po o nome
      // retorna -1 se não existir 
      int getItem(String itemName);

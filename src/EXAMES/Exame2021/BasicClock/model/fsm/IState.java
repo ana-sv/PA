@@ -1,4 +1,4 @@
-package EXAMES.Exame2021_Parte1.BasicClock_FSM.model.fsm;
+package EXAMES.Exame2021.BasicClock.model.fsm;
 
 public interface IState {
 

@@ -1,6 +1,6 @@
-package EXAMES.Exame2021_Parte1.BasicClock_FSM.ui;
+package EXAMES.Exame2021.BasicClock.ui;
 
-import EXAMES.Exame2021_Parte1.BasicClock_FSM.model.fsm.Context;
+import EXAMES.Exame2021.BasicClock.model.fsm.Context;
 
 public class Main {
 

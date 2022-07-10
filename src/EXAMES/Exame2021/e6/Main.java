@@ -1,22 +1,24 @@
-package EXAMES.Exame2021_Parte1.e6_b;
+package EXAMES.Exame2021.e6;
 
 import java.util.ArrayList;
 
-import EXAMES.Exame2021_Parte1.e6_a_CommandPattern.AddItensToClient;
-import EXAMES.Exame2021_Parte1.e6_a_CommandPattern.OnlineCommerce;
+import EXAMES.Exame2021.e6.model.OnlineCommerce;
+import EXAMES.Exame2021.e6.model.CommandPattern.AddItensToClient;
+import EXAMES.Exame2021.e6.model.CommandPattern.CommandManager;
 
-public class Main {
-/*
-    public static void main(String[] args) {
-       OnlineCommerce myShop = new OnlineCommerce();
-        CommandManager manager = new CommandManager();
+public class Main{
+
+    public static void main(String[] args)  {
+        
+    CommandManager manager = new CommandManager();
+    OnlineCommerce myShop = new OnlineCommerce();
 
         ArrayList<String> list1 = new ArrayList<>();
         list1.add("sabao");
         list1.add("escova");
         list1.add("esfregao");
 
-        AddItensToClient amd1 = new AddItensToClient(myShop, list1, 123456 )
+        AddItensToClient cmd1 = new AddItensToClient(myShop, list1, 123456 );
         manager.invokeCommand(cmd1);
 
         ArrayList<String> list2 = new ArrayList<>();
@@ -28,7 +30,8 @@ public class Main {
         manager.undo(); 
 
     }
-   */ 
+
+   
 }
 
 

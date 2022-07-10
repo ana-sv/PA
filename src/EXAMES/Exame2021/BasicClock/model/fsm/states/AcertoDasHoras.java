@@ -1,9 +1,9 @@
-package EXAMES.Exame2021_Parte1.BasicClock_FSM.model.fsm.states;
+package EXAMES.Exame2021.BasicClock.model.fsm.states;
 
-import EXAMES.Exame2021_Parte1.BasicClock_FSM.model.data.ClockData;
-import EXAMES.Exame2021_Parte1.BasicClock_FSM.model.fsm.Adapter;
-import EXAMES.Exame2021_Parte1.BasicClock_FSM.model.fsm.Context;
-import EXAMES.Exame2021_Parte1.BasicClock_FSM.model.fsm.State;
+import EXAMES.Exame2021.BasicClock.model.data.ClockData;
+import EXAMES.Exame2021.BasicClock.model.fsm.Adapter;
+import EXAMES.Exame2021.BasicClock.model.fsm.Context;
+import EXAMES.Exame2021.BasicClock.model.fsm.State;
 
 public class AcertoDasHoras extends Adapter {
 

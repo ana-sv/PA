@@ -1,4 +1,4 @@
-package EXAMES.Exame2021_Parte1.e6_a_CommandPattern;
+package EXAMES.Exame2021.e6.model.CommandPattern;
 
 public interface ICommand {
     boolean execute(); 

@@ -1,15 +1,17 @@
-package EXAMES.Exame2021_Parte1.e6_a_CommandPattern;
+package EXAMES.Exame2021.e6.model.CommandPattern;
 
 import java.util.ArrayList;
 
+import EXAMES.Exame2021.e6.model.IOnlineCommerce;
 
-public class AddItensToClient implements ICommand {
-    OnlineCommerce commerce;
+
+public class AddItensToClient implements ICommand {  // Concrete Command
+    IOnlineCommerce commerce;
     ArrayList<String> products; 
     int clientID; 
 
 
-    public AddItensToClient(OnlineCommerce commerce, ArrayList<String> products, int clientID) {
+    public AddItensToClient(IOnlineCommerce commerce, ArrayList<String> products, int clientID) {
         this.commerce = commerce;
         this.products = products;
         this.clientID = clientID;
@@ -29,7 +31,7 @@ public class AddItensToClient implements ICommand {
     public boolean undo() {
         for( String p : products){
             int id = commerce.getItem(p);   // obtem o id do produto
-            if( id==-1 || !commerce.removeItemFromCart(clientID, id) ) //
+            if( id==-1 || !commerce.removeItemFromCart(clientID, id) ) 
                 return false;
         }
         return true;
