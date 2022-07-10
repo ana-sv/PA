@@ -17,7 +17,7 @@ Fim_M ----> print na Main
 ler(), escrever() e increverAluno()
 ler(), escrever(), cantar() e inscreverAluno()
 ```
-> As classes que derivam de classes abstractas devem fornecer implementação para os métodos abstractos u entao serem também consideradas abstractas. 
+> As classes que derivam de classes abstractas devem fornecer implementação para os métodos abstractos ou entao serem também consideradas abstractas. 
 
 
 # 3
