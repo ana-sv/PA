@@ -1,9 +1,9 @@
-package exercicios.ShoppingList_Memento2;
+package exercicios.ShoppingList_Memento;
 
 import java.io.IOException;
 
-import exercicios.ShoppingList_Memento2.logica.GestaoListaCompras;
-import exercicios.ShoppingList_Memento2.ui.texto.UITextoListaCompras;
+import exercicios.ShoppingList_Memento.logica.GestaoListaCompras;
+import exercicios.ShoppingList_Memento.ui.texto.UITextoListaCompras;
 
 
 public class AppListaDeCompras {

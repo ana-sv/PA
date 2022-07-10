@@ -1,13 +1,13 @@
-package exercicios.ShoppingList_Memento2.logica.memento.dados;
+package exercicios.ShoppingList_Memento.logica.memento.dados;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import exercicios.ShoppingList_Memento2.logica.memento.IMementoOriginator;
-import exercicios.ShoppingList_Memento2.logica.memento.Memento;
+import exercicios.ShoppingList_Memento.logica.memento.IMementoOriginator;
+import exercicios.ShoppingList_Memento.logica.memento.Memento;
 
-public class ListaDeCompras implements Serializable, IMementoOriginator {
+public class ListaDeCompras implements Serializable, IMementoOriginator {   //Originator
 
     private ArrayList<Produto> produtos;
 

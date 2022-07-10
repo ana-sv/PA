@@ -1,4 +1,4 @@
-package exercicios.ShoppingList_Memento2.logica.memento;
+package exercicios.ShoppingList_Memento.logica.memento;
 
 import java.io.IOException;
 

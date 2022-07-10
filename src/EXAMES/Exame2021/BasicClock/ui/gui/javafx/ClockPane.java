@@ -76,7 +76,7 @@ public class ClockPane extends BorderPane{
 
         //Definir o estado de ativacao ( disable/enable) dos botoes set, inc e dec
         // D
-        if (state == State.DISPLAY || state == state.DESLIGADO){
+        if (state == State.DISPLAY || state == State.DESLIGADO){
             inc.isDisabled(); // or inc.setDisable(true);
             dec.isDisabled(); 
             set.isDisabled();           

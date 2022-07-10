@@ -1,9 +1,9 @@
-package exercicios.ShoppingList_Memento2.logica;
+package exercicios.ShoppingList_Memento.logica;
 
 
 
-import exercicios.ShoppingList_Memento2.logica.memento.CareTaker;
-import exercicios.ShoppingList_Memento2.logica.memento.dados.ListaDeCompras;
+import exercicios.ShoppingList_Memento.logica.memento.CareTaker;
+import exercicios.ShoppingList_Memento.logica.memento.dados.ListaDeCompras;
 
 public class GestaoListaCompras {
     private ListaDeCompras originator;

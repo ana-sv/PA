@@ -1,4 +1,4 @@
-package exercicios.ShoppingList_Memento2.logica.memento.dados;
+package exercicios.ShoppingList_Memento.logica.memento.dados;
 
 import java.io.Serializable;
 

@@ -1,8 +1,8 @@
-package exercicios.ShoppingList_Memento2.ui.texto;
+package exercicios.ShoppingList_Memento.ui.texto;
 
 import java.util.Scanner;
 
-import exercicios.ShoppingList_Memento2.logica.GestaoListaCompras;
+import exercicios.ShoppingList_Memento.logica.GestaoListaCompras;
 
 public class UITextoListaCompras {
     private GestaoListaCompras listaDeCompras;
