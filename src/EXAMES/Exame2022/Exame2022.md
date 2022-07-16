@@ -280,7 +280,7 @@ public class Main4 {
 }
 
 ```
-
+*
 #### Output do Programa 
 ```java 
 Begin
@@ -298,3 +298,11 @@ End
 ````
 
 
+## 5.a) 
+
+> #**Diagrama de estados**
+>  Estados : EMVOO , POUSADA , PRONTA, MORTA
+>  Transições: mexe(), pica(); descola(); tentaEsmagar(); 
+
+
+# ... 
