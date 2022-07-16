@@ -30,7 +30,7 @@ class MelgaAdapter implements IStates {
         if (context.getState() != MelgaState.MORTA) {
             data.incrementaTentativas();
             Random rdn = new Random();
-            if (rdn.nextInt(100) < 50) { // esmaga 50% das x
+            if (rdn.nextInt(100) < 20) { // esmaga 20% das x
 
                 context.changeState(new StateMorta(context, data));
                 return true;

@@ -11,7 +11,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
-import java.net.http.HttpResponse.BodyHandler;
+
 
 import EXAMES.Exame2022.perg_Melga.model.MelgaManager;
 
@@ -47,15 +47,17 @@ public class RootPane extends BorderPane {
         this.setBottom(btBox);
         btBox.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, null, null)));
 
-        lblMexidas = new Label("Mexidas: ");
-        lblTentativasEsmagamento = new Label("Tentativas de Esmagamento: ");
+
+
+        lblMexidas = new Label("Mexidas:" + MelgaManager.getNumMexidas());
+        lblTentativasEsmagamento = new Label("Tentativas de Esmagamento: " + MelgaManager.getTentatidasEsmagamento());
 
         lblBox = new VBox(lblMexidas, lblTentativasEsmagamento);
         lblBox.setAlignment(Pos.CENTER_RIGHT);
         lblBox.setPadding(new Insets(10));
        // lblBox.setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE, null, null)));
 
-        lblSituacao = new Label("Situacao");
+        lblSituacao = new Label(MelgaManager.getState().toString());
         lblSituacao.setPadding(new Insets(10));
 
         hbox = new HBox();
@@ -64,13 +66,22 @@ public class RootPane extends BorderPane {
         this.setLeft(hbox);
         hbox.setPadding( new Insets(20));
 
+
+
     }
 
     private void registerHandlers() {
+        MelgaManager.addPropertyChangeListener( evt -> { update(); });
+
+        btMexe.setOnAction(evt -> { MelgaManager.mexe(); });
+        btTentaEsmagar.setOnAction( evt -> { MelgaManager.tentaEsmagar(); });
 
     }
 
     private void update() {
+        lblMexidas.setText("Mexidas: " + MelgaManager.getNumMexidas());
+        lblTentativasEsmagamento.setText("Tentativas de Esmagamento: " + MelgaManager.getTentatidasEsmagamento());
+        lblSituacao.setText(MelgaManager.getState().toString());
 
     }
 

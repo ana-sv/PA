@@ -30,28 +30,21 @@ public class MelgaManager {
         return result;
     }
 
-    public MelgaState geState(){
-        MelgaState ms =  melgaFsm.getState();
-        pcs.firePropertyChange(null, null, null);
-        return ms; 
+    public MelgaState getState(){
+        return  melgaFsm.getState();
     }
 
     public long getNumMexidas(){ 
-        long  m = melgaFsm.getNumMexidas();
-        pcs.firePropertyChange(null, null, null);
-        return m;
+        return  melgaFsm.getNumMexidas();
     }
 
     public long getTentatidasEsmagamento(){ 
-        long  es = melgaFsm.getNumTentativasEsmagamento();
-        pcs.firePropertyChange(null, null, null);
-        return es;
+       return  melgaFsm.getNumTentativasEsmagamento();
     }
 
     public long getNumPicadas(){
-        long p = melgaFsm.getNumPicadas();
-        pcs.firePropertyChange(null, null, null);
-        return p;
+        return melgaFsm.getNumPicadas();
+
     }
 
     public boolean isPousadasEmAnimal(){ 
