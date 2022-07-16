@@ -2,9 +2,9 @@ package EXAMES.Exame2022.perg_Melga.model.fsm;
 
 import EXAMES.Exame2022.perg_Melga.model.data.MelgaData;
 
-class StatePousada extends MelgaAdapter {
+ class StatePousada extends MelgaAdapter {
 
-    protected StatePousada(MelgaContext context, MelgaData data) {
+    public StatePousada(MelgaContext context, MelgaData data) {
         super(context, data);
     }
 

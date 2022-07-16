@@ -4,11 +4,10 @@ import EXAMES.Exame2022.perg_Melga.model.data.MelgaData;
 
 class StatePronta extends MelgaAdapter {
 
-    protected StatePronta(MelgaContext context, MelgaData data) {
+   public StatePronta(MelgaContext context, MelgaData data) {
         super(context, data);
     }
 
-  
     @Override
     public void descola() {
         context.changeState( new StateEmVoo(context, data));

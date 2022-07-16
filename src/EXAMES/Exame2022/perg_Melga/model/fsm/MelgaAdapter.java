@@ -32,10 +32,12 @@ class MelgaAdapter implements IStates {
             Random rdn = new Random();
             if (rdn.nextInt(100) < 20) { // esmaga 20% das x
 
-                context.changeState(new StateMorta(context, data));
+                //context.changeState(new StateMorta(context, data)); // SEM FACTORY
+                MelgaState.MORTA.createState(context, data);  // COM FACTORY
                 return true;
             } else {
-                context.changeState(new StateEmVoo(context, data));
+              //  context.changeState(new StateEmVoo(context, data));
+                  MelgaState.EMVOO.createState(context, data); // COM FACTORY 
                 return false;
             }
 

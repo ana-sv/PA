@@ -10,7 +10,8 @@ public class MelgaContext {
      // construtor, indicando o primeiro estado a lançar
     public MelgaContext(){
         this.data = new MelgaData();
-        this.state = new StateEmVoo(this,data);  // SEM FACTORY
+       // this.state = new StateEmVoo(this,data);  // SEM FACTORY
+        this.state = MelgaState.EMVOO.createState(this, data); //COM FACTORY 
     }
 
     // método público que permite saber o estado atual
