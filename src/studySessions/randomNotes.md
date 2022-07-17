@@ -1,8 +1,4 @@
-# Notes 
-
-
-
-
+# Random Notes 
 
 ### Deserialização Exemplo
 ``` java
