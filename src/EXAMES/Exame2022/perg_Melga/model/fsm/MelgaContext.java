@@ -20,7 +20,7 @@ public class MelgaContext {
     }
 
     // método package private que muda o estado atual 
-    public void changeState( IStates state ){
+     void changeState( IStates state ){
         this.state=state; 
     }
 

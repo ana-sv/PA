@@ -15,13 +15,12 @@ class MelgaAdapter implements IStates {
     }
 
     // metodo changeState protected SEM FACTORY
-    protected void changeState(IStates newState) {
-        context.changeState(newState);
-    }
+  //  protected void changeState(IStates newState) {
+    //    context.changeState(newState); }
 
-    // metodo changeState protected COM FACTORY
-    // protected void changeState( IStates newStates){
-    // context.changeState(newStates.createState(context, data)); }
+    // metodo changeState COM FACTORY
+   protected void changeState( MelgaState newStates){
+    context.changeState(newStates.createState(context, data)); }
 
     // método comum a todos os estados
     @Override
@@ -30,14 +29,14 @@ class MelgaAdapter implements IStates {
         if (context.getState() != MelgaState.MORTA) {
             data.incrementaTentativas();
             Random rdn = new Random();
-            if (rdn.nextInt(100) < 20) { // esmaga 20% das x
+            if (rdn.nextInt(100) < 20 ) { // esmaga 20% das x
 
                 //context.changeState(new StateMorta(context, data)); // SEM FACTORY
-                MelgaState.MORTA.createState(context, data);  // COM FACTORY
+                context.changeState(MelgaState.MORTA.createState(context, data));  // COM FACTORY
                 return true;
             } else {
               //  context.changeState(new StateEmVoo(context, data));
-                  MelgaState.EMVOO.createState(context, data); // COM FACTORY 
+                  context.changeState(MelgaState.EMVOO.createState(context, data)); // COM FACTORY 
                 return false;
             }
 
