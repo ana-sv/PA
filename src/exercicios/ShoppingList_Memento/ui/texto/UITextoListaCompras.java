@@ -35,6 +35,7 @@ public class UITextoListaCompras {
         do {
             op = lerInt("> ");
         } while (op < 0 || op >= opcoes.length);
+        s.close();
         return op;
     }
 
@@ -43,6 +44,7 @@ public class UITextoListaCompras {
         String[] opcoes = {"Sair", "Listar", "Acrescentar produto",
                 "Eliminar prduto", "Alterar quantidade", "Undo", "Redo"};
         int op = escolheOpcao(opcoes);
+        s.close();
         switch (op) {
             case 0:  // Sair
                 sair = true;
