@@ -17,11 +17,6 @@ public class Main {
        System.out.print(c.mostraRelogio());
        System.out.print(c.getState());
 
-      
-
-
-
-
 
 
     }
