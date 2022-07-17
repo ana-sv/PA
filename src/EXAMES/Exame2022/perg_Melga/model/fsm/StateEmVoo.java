@@ -18,11 +18,11 @@ import EXAMES.Exame2022.perg_Melga.model.data.MelgaData;
     public void mexe() {
         data.incrementaMexidas();
         if( data.isPousadaEmAnimal() == true  )
-            // context.changeState( new StatePronta(context,data)); // SEM FACTORY 
-           context.changeState( MelgaState.PRONTA.createState(context, data)) ;  //COM FACTORY
+            //changeState( new StatePronta(context,data)); // SEM FACTORY 
+           changeState( MelgaState.PRONTA) ;  //COM FACTORY
         else 
-          //  context.changeState( new StatePousada(context,data) ); // SEM FACTORY 
-          context.changeState( MelgaState.POUSADA.createState(context, data) ); //COM FACTORY
+          //changeState( new StatePousada(context,data) ); // SEM FACTORY 
+          changeState( MelgaState.POUSADA ); //COM FACTORY
     }
 
     

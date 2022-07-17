@@ -19,10 +19,10 @@ public class MelgaContext {
         return state.getState();
     }
 
-    // método package private que muda o estado atual 
-     void changeState( IStates state ){
-        this.state=state; 
-    }
+    // método package private que muda o estado atual // SEM FACTORY
+     void changeState( IStates state ){ 
+        this.state=state; }
+
 
     // métodos que reencaminham as acçoes/eventos para os métodos do estado ativo
     public void mexe() {

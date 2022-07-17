@@ -10,8 +10,8 @@ import EXAMES.Exame2022.perg_Melga.model.data.MelgaData;
 
     @Override
     public void descola() {
-      //  context.changeState(new StateEmVoo(context, data)); // SEM FACTORY
-      context.changeState(MelgaState.EMVOO.createState(context, data));  //COM FACTORY
+      //changeState(new StateEmVoo(context, data)); // SEM FACTORY
+      changeState(MelgaState.EMVOO);  //COM FACTORY
     }
 
     @Override

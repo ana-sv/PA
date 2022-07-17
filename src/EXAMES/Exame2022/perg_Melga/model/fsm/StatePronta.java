@@ -10,15 +10,15 @@ class StatePronta extends MelgaAdapter {
 
     @Override
     public void descola() {
-       // context.changeState( new StateEmVoo(context, data)); // SEM FACTORY
-       context.changeState(MelgaState.EMVOO.createState(context, data));  //COM FACTORY
+       //changeState( new StateEmVoo(context, data)); // SEM FACTORY
+       changeState(MelgaState.EMVOO);  //COM FACTORY
     }
 
     @Override
     public void pica() {
         data.incrementaPicada();
-        //context.changeState(new StatePousada(context, data));  // SEM FACTORY 
-        context.changeState(MelgaState.POUSADA.createState(context, data));  //COM FACTORY
+        //changeState(new StatePousada(context, data));  // SEM FACTORY 
+        changeState(MelgaState.POUSADA);  //COM FACTORY
     }
 
     @Override
